@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Clock From Hell™</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="window">
+    <div class="titlebar">
+      <span>🕐 Official Time Access Portal™</span>
+    </div>
+
+    <div class="content">
+
+      <!-- Step 1 -->
+      <div class="step" id="step1">
+        <h1>Welcome</h1>
+        <p>Before viewing the time, please confirm that you believe in time.</p>
+
+        <button onclick="nextStep(1)">Yes, time exists</button>
+        <button onclick="confuseUser()">I'm not sure</button>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step hidden" id="step2">
+        <h1>Security Check</h1>
+        <p>Why do you need the time?</p>
+
+        <select id="reason">
+          <option>To be productive</option>
+          <option>Just curious</option>
+          <option>Avoid responsibilities</option>
+          <option>None of your business</option>
+        </select>
+
+        <button onclick="nextStep(2)">Continue</button>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step hidden" id="step3">
+        <h1>Final Confirmation</h1>
+
+        <p>
+          I promise not to waste the precious time I am about to receive.
+        </p>
+
+        <button onclick="showClock()">
+          I solemnly swear
+        </button>
+      </div>
+
+      <!-- Clock Screen -->
+      <div class="step hidden" id="clockScreen">
+
+        <h2>The Current Time Is:</h2>
+
+        <div id="clock">00:00:00</div>
+
+        <p id="message">
+          Time is passing...
+        </p>
+
+        <button onclick="restart()">
+          Request Time Again
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    Designed for maximum inconvenience™
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
